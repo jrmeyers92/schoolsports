@@ -1,4 +1,3 @@
-title: News
 tabs:
   main:
     display: Main
@@ -12,30 +11,77 @@ tabs:
               validate:
                 - required
           -
-            handle: subtitle
+            handle: date
             field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Subtitle
-              icon: text
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: Date
+              icon: date
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
           -
-            handle: content
+            handle: location
             field:
-              type: markdown
-              display: Content
-              localizable: true
+              options:
+                home: Home
+                away: Away
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: Location
+              icon: radio
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
-            handle: template
+            handle: opponent
             field:
-              type: template
-              display: Template
-              localizable: true
+              max_items: 1
+              mode: default
+              create: true
+              collections:
+                - opponents
+              type: entries
+              display: Opponent
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: our_score
+            field:
+              type: integer
+              display: 'Our Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: opponent_score
+            field:
+              type: integer
+              display: 'Opponent Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: cover_photo
             field:
@@ -71,6 +117,18 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: game_recap
+            field:
+              antlers: false
+              type: textarea
+              display: 'Game Recap'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -100,6 +158,7 @@ tabs:
           -
             handle: team
             field:
+              max_items: 1
               mode: select
               create: true
               taxonomies:
@@ -130,7 +189,6 @@ tabs:
           -
             handle: year
             field:
-              max_items: 1
               mode: select
               create: true
               taxonomies:
@@ -143,3 +201,4 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+title: Game

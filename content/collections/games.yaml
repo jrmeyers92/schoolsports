@@ -1,0 +1,14 @@
+title: Games
+template: games/show
+layout: layout
+revisions: false
+title_format: '{{gender}} {{team}} {{sport}} {{year}} {{date}}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

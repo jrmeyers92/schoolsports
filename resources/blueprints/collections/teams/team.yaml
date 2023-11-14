@@ -1,0 +1,126 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: gender
+            field:
+              options:
+                boys: Boys
+                girls: Girls
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: Gender
+              icon: radio
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: team
+            field:
+              options:
+                freshman: Freshman
+                jv: JV
+                varsity: Varsity
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: Team
+              icon: radio
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: sport
+            field:
+              options:
+                baseball: Baseball
+                basketball: Basketball
+                cross_country: 'Cross Country'
+                field_hockey: 'Field Hockey'
+                golf: Golf
+                soccer: Soccer
+                lacrosse: Lacrosse
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: Sport
+              icon: radio
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: schedule
+            field:
+              mode: default
+              type: collections
+              display: Schedule
+              icon: collections
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: rosters
+            field:
+              mode: default
+              create: true
+              collections:
+                - rosters
+              type: entries
+              display: Rosters
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: news
+            field:
+              mode: default
+              create: true
+              collections:
+                - news
+              type: entries
+              display: News
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+title: Team

@@ -1,0 +1,91 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: gender
+            field:
+              max_items: 1
+              mode: select
+              create: true
+              taxonomies:
+                - gender
+              type: terms
+              display: Gender
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: team
+            field:
+              mode: select
+              create: true
+              taxonomies:
+                - team
+              type: terms
+              display: Team
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: sport
+            field:
+              mode: select
+              create: true
+              taxonomies:
+                - sports
+              type: terms
+              display: Sport
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: year
+            field:
+              max_items: 1
+              mode: select
+              create: true
+              taxonomies:
+                - year
+              type: terms
+              display: Year
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+title: Roster
